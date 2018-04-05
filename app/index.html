@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">-->
+    <link rel="stylesheet" href="bower_components/bootstrap/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">    &lt;!&ndash;<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">&ndash;&gt;-->
+    <!--<link rel="stylesheet" href="app.css">-->
+    <!--<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>-->
+</head>
+<body ng-app="myApp" ng-controller="HomeController">
+<div class="container">
+    <div class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">SPORTS STORE</a>
+        <cart-summary/>
+    </div>
+
+    <div class="alert alert-danger" ng-show="data.error">
+        Error ({{data.error.status}}). The product data was not loaded.
+        <a href="#" class="alert-link">Click here to try again</a>
+    </div>
+
+    <ng-view/>
+
+</div>
+<!--<div class="page-header">-->
+<!--<h1>-->
+<!--{{todo.user}}'s To Do List-->
+<!--<span class="badge" ng-class="warningLevel()"-->
+<!--ng-hide="incompleteCount() == 0">-->
+<!--{{incompleteCount()}}-->
+<!--</span>-->
+<!--</h1>-->
+<!--</div>-->
+<!--<div class="panel">-->
+<!--<div class="input-group">-->
+<!--<input class="form-control" ng-model="actionText" style="-->
+<!--border-radius: 5px;-->
+<!--margin-right: 5px;-->
+<!--margin-bottom: 10px;"/>-->
+<!--<span class="input-group-btn">-->
+<!--<button class="btn btn-default" ng-click="addNewItem(actionText)">Add</button>-->
+<!--</span>-->
+<!--</div>-->
+<!--<table class="table table-striped">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>Description</th>-->
+<!--<th>Done</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr ng-repeat="item in todos.items | checkedItems:showComplete | orderBy:'action'">-->
+<!--<td>{{item.action}}</td>-->
+<!--<td><input type="checkbox" ng-model="item.done"/></td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+<!--<div class="checkbox-inline">-->
+<!--<label><input type="checkbox" ng_model="showComplete"> Show Complete</label>-->
+<!--</div>-->
+<!--</div>-->
+</div>
+</body>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+<script src="js/Controllers/HomeController.js"></script>
+<script src="js/controllers/checkoutControllers.js"></script>
+<script src="js/Controllers/productListControllers.js"></script>
+<script src="js/filters/customFilters.js"></script>
+<script src="js/components/cart/cart.js"></script>
+</body>
+</html>
