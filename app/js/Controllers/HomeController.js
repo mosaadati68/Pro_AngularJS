@@ -1,11 +1,6 @@
 myApp.controller("HomeController", function ($scope, $timeout, $http) {
     // $timeout(function () {
     $http.get("todo.json").then(function (response) {
-        // var jsonString = angular.toJson(response.data);
-        // console.log(jsonString);
-        // console.log(response.data);
-        // model.items = angular.fromJson(jsonString);
-        $scope.data = {
             products: response.data
         };
     }, function (error) {
